@@ -12,7 +12,7 @@ metadata = MetaData(
 
 db = SQLAlchemy(metadata=metadata)
 
-
+# A Restaurant has many Pizzas through RestaurantPizza
 class Restaurant(db.Model, SerializerMixin):
     __tablename__ = "restaurants"
 
@@ -28,6 +28,7 @@ class Restaurant(db.Model, SerializerMixin):
         return f"<Restaurant {self.name}>"
 
 
+A Pizza has many Restaurants through RestaurantPizza
 class Pizza(db.Model, SerializerMixin):
     __tablename__ = "pizzas"
 
@@ -43,6 +44,7 @@ class Pizza(db.Model, SerializerMixin):
         return f"<Pizza {self.name}, {self.ingredients}>"
 
 
+A RestaurantPizza belongs to a Restaurant and belongs to a Pizza
 class RestaurantPizza(db.Model, SerializerMixin):
     __tablename__ = "restaurant_pizzas"
 
