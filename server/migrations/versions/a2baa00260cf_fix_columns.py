@@ -1,8 +1,8 @@
-"""message
+"""fix columns
 
-Revision ID: 84f014b38fca
-Revises: 0dda3cf8260e
-Create Date: 2024-01-23 19:26:52.817605
+Revision ID: a2baa00260cf
+Revises: e699eced5fd7
+Create Date: 2024-04-06 21:36:31.582229
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '84f014b38fca'
-down_revision = '0dda3cf8260e'
+revision = 'a2baa00260cf'
+down_revision = 'e699eced5fd7'
 branch_labels = None
 depends_on = None
 
